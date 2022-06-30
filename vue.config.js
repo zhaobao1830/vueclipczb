@@ -29,6 +29,7 @@ module.exports = defineConfig({
     config
       .resolve
       .alias
+      .set('@', resolve('src'))
       .set('core', resolve('src/core'))
   }
 })
