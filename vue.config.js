@@ -31,5 +31,12 @@ module.exports = defineConfig({
       .alias
       .set('@', resolve('src'))
       .set('core', resolve('src/core'))
+
+    config
+      .plugin('html')
+      .tap(args => {
+        args[0].title = 'vue-cli PC端开源项目'
+        return args
+      })
   }
 })
